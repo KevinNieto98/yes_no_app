@@ -42,7 +42,7 @@ class _ChatWiew extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final message = chatProvider.messagesList[index];
                     return (message.fromWho == FromWho.hers)
-                        ? const HerMessageBubble()
+                        ?  HerMessageBubble(message: message)
                         :  MyMessageBubble(message: message);
               },
             )),

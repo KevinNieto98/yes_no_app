@@ -30,8 +30,9 @@ class ChatProvider extends ChangeNotifier {
 
   Future<void> herReply() async {
     final herMessage = await getYesNoAnswer.getAnswer();
-    print(herMessage);
+    print('herMessage: $herMessage');
     messagesList.add(herMessage);
+
     notifyListeners();
   }
 
